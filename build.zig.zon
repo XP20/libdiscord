@@ -1,7 +1,7 @@
 .{
     .name = .discord,
     .version = "0.0.0",
-    .fingerprint = 0x99e1da0f4b92035c,
+    .fingerprint = 0x4ed219c0e99fb2b4,
     .minimum_zig_version = "0.14.0",
     .paths = .{
         "build.zig",
