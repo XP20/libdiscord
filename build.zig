@@ -4,15 +4,15 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
-    const discord_mod = b.createModule(.{
-        .root_source_file = b.path("src/root.zig"),
+    const discord_mod = b.addModule("discord", .{
+        .root_source_file = b.path("src/main.zig"),
         .target = target,
         .optimize = optimize,
     });
 
     const discord = b.addLibrary(.{
         .linkage = .static,
-        .name = "libdiscord",
+        .name = "discord",
         .root_module = discord_mod,
     });
 
